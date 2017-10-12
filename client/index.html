@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="client/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app-wrapper">
+        <div class="users-wrapper">
+            <h4>Пользователи:</h4>
+            <div id="users">
+
+            </div>
+        </div>
+
+        <div class="users-rules">
+            <div id="rules">
+                <p><strong>Управление:</strong> W A S D </p>
+                <p><strong>Cтрельба:</strong> клик на поле </p>
+            </div>
+        </div>
+
+        <div class="modal">
+            <div class="modal__block">
+                <form action="" id="login">
+                    <input type="text" placeholder="Ник">
+                    <button class="send">Отправить</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="clients-counter">
+            <div class="clients-counter__title">Сейчас онлайн: </div>
+            <div class="clients-counter__number"></div>
+        </div>
+
+        <canvas id="app" height="500" width="500" style="border: 1px solid #ddd"></canvas>
+
+        <div id="messages"></div>
+
+        <div class="input-wrapper">
+            <form action="" id="sendMessage">
+                <input type="text" placeholder="Сообщение">
+                <button class="send">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./client/main.js"></script>
+</body>
+</html>
